@@ -1,0 +1,31 @@
+{
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "compilerOptions": {
+		"lib": ["dom", "es5", "es2015", "es2017"],
+		"module": "commonjs",
+		"target": "es5",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+        "declaration": true,
+		"jsx": "react",
+		"moduleResolution": "node",
+		"noEmit": false,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+        "outDir": "dist/es6",
+        "rootDirs": ["src"]
+    },
+    "include": [
+		"src/**/*.ts"
+	],
+    "exclude": [
+        "node_modules",
+        "example",
+        "dist"
+    ]
+}

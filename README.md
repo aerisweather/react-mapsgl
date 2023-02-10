@@ -266,6 +266,8 @@ For basic examples of how to use React MapsGL with the different third-party map
 > yarn develop
 ```
 
+You will need to rename `.env.txt` to `.env` at the root of this repo and add the necessary AerisWeather and third-party mapping keys before running `yarn develop`.
+
 Open the `examples/src/index.ts` file and swap out the rendered component based on your desired mapping library: 
 
 ```typescript

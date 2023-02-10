@@ -94,6 +94,10 @@ const MapControllerFactory = ({
         const accountRef = useRef<mapsgl.Account>();
         const controllerRef = useRef<AnyMapController>();
 
+        useEffect(() => () => {
+            controllerRef.current?.dispose();
+        }, []);
+
         useEffect(() => {
             if (!map || map === controllerRef.current?.map) return;
 
@@ -125,7 +129,6 @@ const MapControllerFactory = ({
                 controller?.on('layer:add', onLayerAdd);
                 controller?.on('source:remove', onSourceRemove);
                 controller?.on('layer:remove', onLayerRemove);
-                setIsInitialized(true);
             } catch (error) {
                 console.error(error);
             }

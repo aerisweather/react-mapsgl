@@ -16,7 +16,7 @@ const MapboxMap = (): React.ReactElement => {
     };
 
     useEffect(() => {
-        mapboxgl.accessToken = 'pk.eyJ1IjoidTEwaW50IiwiYSI6InQtMnZvTkEifQ.c8mhXquPE7_xoB3P4Ag8cA';
+        mapboxgl.accessToken = `${process.env.MAPBOX_TOKEN}`;
         const mapEl = new mapboxgl.Map({
             container: containerRef.current,
             style: 'mapbox://styles/mapbox/light-v9',

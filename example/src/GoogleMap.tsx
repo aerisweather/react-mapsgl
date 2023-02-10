@@ -18,7 +18,8 @@ const GoogleMap = (): React.ReactElement => {
         loader.load().then((google) => {
             const mapEl = new google.maps.Map(containerRef.current, {
                 center: { lat: MAP_OPTS.center.lat, lng: MAP_OPTS.center.lon },
-                zoom: MAP_OPTS.zoom
+                zoom: MAP_OPTS.zoom,
+                mapId: `${process.env.GOOGLE_MAP_ID}`
             });
             setMap(mapEl);
         });

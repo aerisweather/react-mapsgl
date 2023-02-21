@@ -1,6 +1,6 @@
 {
   "name": "@aerisweather/react-mapsgl",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "homepage": "https://www.aerisweather.com",
   "license": "MIT",
   "main": "dist/es6/index.js",

@@ -16,7 +16,17 @@ const MapController = ReactMapsGL({
     }
 });
 
-const MapsGL = ({ strategy, map }: { strategy: MapStrategyType; map: unknown; }): React.ReactElement => (
+type Props = {
+    strategy: MapStrategyType;
+    map: unknown;
+    children?: any;
+};
+
+const MapsGL = ({
+    strategy,
+    map,
+    children
+}: Props): React.ReactElement => (
     <MapController strategy={strategy} map={map}>
         <Timeline
             start={new Date(Date.now() - (3600 * 12 * 1000))}
@@ -50,6 +60,7 @@ const MapsGL = ({ strategy, map }: { strategy: MapStrategyType; map: unknown; })
             }
         }} />
         <WeatherLayer id="alerts-outline" />
+        {children}
     </MapController>
 );
 

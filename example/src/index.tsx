@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client';
-import ReactMapboxMap from './ReactMapboxMap';
+// import ReactMapboxMap from './ReactMapboxMap';
+import ReactMapGLMap from './ReactMapGLMap';
 // import MapboxMap from './MapboxMap';
 // import MaplibreMap from './MaplibreMap';
 // import GoogleMap from './GoogleMap';
@@ -8,4 +9,4 @@ import ReactMapboxMap from './ReactMapboxMap';
 const container = document.querySelector('#app');
 const root = createRoot(container!);
 
-root.render(<ReactMapboxMap />);
+root.render(<ReactMapGLMap />);

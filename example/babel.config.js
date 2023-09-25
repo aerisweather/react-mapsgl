@@ -5,11 +5,13 @@ module.exports = {
                 browsers: [
                     '> 0.25%',
                     'not dead',
-                    'not ie < 11'
+                    'not ie > 0'
                 ]
             },
             corejs: { version: 3 }
         }]
     ],
-    plugins: []
+    plugins: [
+        '@babel/plugin-transform-runtime'
+    ]
 };

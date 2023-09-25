@@ -32,7 +32,7 @@ const MapView = ({
     zoom = 3
 }: Props): React.ReactElement => {
     const [map, setMap] = useState<any>();
-    const [playing, setPlaying] = useState(false);
+    const [playing, setPlaying] = useState(false); // eslint-disable-line no-unused-vars
 
     // store the Mapbox map reference when loaded so it can be provided to the MapsGL controller
     const onMapLoad = (mapEl: any) => {

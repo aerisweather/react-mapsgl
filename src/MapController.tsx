@@ -99,6 +99,11 @@ const MapControllerFactory = ({
         }, []);
 
         useEffect(() => {
+            if (!map) {
+                controllerRef.current?.dispose();
+                return;
+            }
+
             if (!map || map === controllerRef.current?.map) return;
 
             const account = new mapsgl.Account(accessKeys.id, accessKeys.secret);
@@ -129,6 +134,11 @@ const MapControllerFactory = ({
                 controller?.on('layer:add', onLayerAdd);
                 controller?.on('source:remove', onSourceRemove);
                 controller?.on('layer:remove', onLayerRemove);
+
+                if (strategy === 'mapbox' && map?.style?.loaded()) {
+                    setIsInitialized(true);
+                    onLoad();
+                }
             } catch (error) {
                 console.error(error);
             }

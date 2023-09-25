@@ -19,6 +19,10 @@ const WeatherLayer = ({
     const controller = useContext(MapControllerContext);
 
     useEffect(() => {
+        if (controller.hasWeatherLayer(id)) {
+            return;
+        }
+
         const instance = controller.addWeatherLayer(id, {
             data: {
                 ...data,

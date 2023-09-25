@@ -32,8 +32,8 @@ const MapsGL = ({
             start={new Date(Date.now() - (3600 * 12 * 1000))}
             duration={6}
             isPlaying={true}
-            onPlay={() => console.log('playing')}
-            onStop={() => console.log('stopped')}
+            onPlay={() => console.log('playing')} // eslint-disable-line no-console
+            onStop={() => console.log('stopped')} // eslint-disable-line no-console
         />
         <DataInspector event="move" />
         <LegendControl />

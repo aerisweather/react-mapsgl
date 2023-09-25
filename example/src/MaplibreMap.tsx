@@ -3,7 +3,7 @@ import maplibregl from 'maplibre-gl';
 import MapsGL from './MapsGL';
 import { MAP_OPTS } from './constants';
 
-const MaplibreMap = (): React.ReactElement => {
+const MaplibreMap = (props: any): React.ReactElement => {
     const [map, setMap] = useState<any>();
     const containerRef = React.useRef<any>(null);
 
@@ -30,7 +30,7 @@ const MaplibreMap = (): React.ReactElement => {
                 className={className}
                 style={{ ...containerStyle }}
             ></div>
-            <MapsGL strategy="maplibre" map={map} />
+            <MapsGL strategy="maplibre" map={map} {...props} />
         </div>
     );
 };

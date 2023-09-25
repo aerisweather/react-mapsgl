@@ -9,7 +9,7 @@ const Map = ReactMapboxGL({
     accessToken: `${process.env.MAPBOX_TOKEN}`
 });
 
-const ReactMapboxMap = (): React.ReactElement => {
+const ReactMapboxMap = (props: any): React.ReactElement => {
     const [map, setMap] = useState<any>();
 
     const onMapLoad = (mapEl: any) => {
@@ -28,7 +28,7 @@ const ReactMapboxMap = (): React.ReactElement => {
                     height: '600px'
                 }}
             >
-                <MapsGL strategy="mapbox" map={map} />
+                <MapsGL strategy="mapbox" map={map} {...props} />
             </Map>
         </>
     );

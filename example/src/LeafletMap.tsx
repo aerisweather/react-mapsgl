@@ -5,7 +5,7 @@ import { MAP_OPTS } from './constants';
 
 import 'leaflet/dist/leaflet.css';
 
-const LeafletMap = (): React.ReactElement => {
+const LeafletMap = (props: any): React.ReactElement => {
     const [map, setMap] = useState<any>();
     const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -33,7 +33,7 @@ const LeafletMap = (): React.ReactElement => {
                 className={className}
                 style={{ ...containerStyle }}
             ></div>
-            <MapsGL strategy="leaflet" map={map} />
+            <MapsGL strategy="leaflet" map={map} {...props} />
         </div>
     );
 };

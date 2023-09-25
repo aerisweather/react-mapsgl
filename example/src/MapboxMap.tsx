@@ -5,7 +5,7 @@ import { MAP_OPTS } from './constants';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const MapboxMap = (): React.ReactElement => {
+const MapboxMap = (props: any): React.ReactElement => {
     const [map, setMap] = useState<any>();
     const containerRef = React.useRef<any>(null);
 
@@ -33,7 +33,7 @@ const MapboxMap = (): React.ReactElement => {
                 className={className}
                 style={{ ...containerStyle }}
             ></div>
-            <MapsGL strategy="mapbox" map={map} />
+            <MapsGL strategy="mapbox" map={map} {...props} />
         </div>
     );
 };

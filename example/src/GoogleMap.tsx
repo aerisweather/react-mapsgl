@@ -3,7 +3,7 @@ import { Loader } from 'google-maps';
 import MapsGL from './MapsGL';
 import { MAP_OPTS } from './constants';
 
-const GoogleMap = (): React.ReactElement => {
+const GoogleMap = (props: any): React.ReactElement => {
     const [map, setMap] = useState<any>();
     const containerRef = React.useRef<any>(null);
 
@@ -32,7 +32,7 @@ const GoogleMap = (): React.ReactElement => {
                 className={className}
                 style={{ ...containerStyle }}
             ></div>
-            <MapsGL strategy="google" map={map} />
+            <MapsGL strategy="google" map={map} {...props} />
         </div>
     );
 };

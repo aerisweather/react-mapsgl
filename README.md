@@ -1,8 +1,9 @@
-[<img width="300" alt="MapsGL" src="https://www.aerisweather.com/img/graphics/mapsgl-logo.png">](https://www.aerisweather.com/products/mapsgl/)
-
 # react-mapsgl
 
 **react-mapsgl** is a React wrapper for our [MapsGL service and SDK](https://www.aerisweather.com/products/mapsgl/), a Javascript SDK that allows you to easily customize and integrate a variety of high-quality, vector-based weather data, imagery, and visualizations into your applications and custom solutions.
+
+> [!WARNING]
+> This package is deprecated. Please use [@xweather/react-mapsg](https://github.com/vaisala-xweather/react-mapsgl) instead.
 
 ### Supported Mapping Libraries
 
